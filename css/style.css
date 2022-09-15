@@ -1,0 +1,183 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    
+}
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+/* ----------------------------NAV BAR--------------------*/
+nav{
+    background-color: rgb(0, 0, 0);
+    height: 80px;
+    width: 100%;
+}
+label.logo{
+    color: aliceblue;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+nav ul{
+    float: right;
+    margin: right 20px;;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+a.active,a:hover{
+    background-color: rgb(26, 72, 112);
+    transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media (max-width: 952px) {
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font: size 16px; ;
+    }
+    
+}
+@media (max-width: 858px) {
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #5672ee;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all 1s;
+
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover,a.active{
+        background: none;
+        color: rgb(31, 7, 2);
+
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+/* ----------------------------HOME--------------------*/
+}
+.homepage {
+    top: 83px;
+    height: 800px;
+    width: 100%;
+    
+}
+/* .homepage {
+    display: block;
+
+} */
+
+.homepage {
+    background-image: url("../images/covertech.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    transition: all 10s;
+}
+.homepage > h1{
+    padding-top: 340px;
+    font-size: 170px;
+}
+.homepage > h2{
+    font-size: 5vh;
+}
+.homepage > h1,h2{
+    text-align: center;
+}
+
+/* ----------------------------ABOUT--------------------*/
+.about{
+    display: flex;
+    height: 500px;
+    width: 100%;
+    padding-top: 100px;
+
+}
+.about{
+    background-color: black;
+    color: aliceblue;
+}
+.pic{
+    display: block;
+    width: 50%;
+    margin: 20px auto;
+    padding-left: 60px;
+}
+.me {
+    margin-left: 50px;
+    object-fit: contain;
+    margin:10px auto;
+    width: 300px;
+    height: 300px;
+    
+}
+.info{
+    text-align: center;
+    width: 900px;
+}
+.info > p {
+    font-size: 20px;
+}
+.info > h2{
+    font-size: 40px;
+}
+@media (max-width: 858px){
+    .about{
+        flex-wrap: wrap;
+        justify-content: center;
+        height: 900px;
+    }
+    .pic {
+        display: block;
+        /* margin-left: auto;
+        margin-right: auto; */
+        width: 100%;
+
+    }
+    .me{
+        min-width: 400px;
+    }
+}
