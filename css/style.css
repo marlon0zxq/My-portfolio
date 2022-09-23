@@ -4,11 +4,12 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Inter', sans-serif;
     
 }
 body{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
+    background-color: black;
 
 }
 /* ----------------------------NAV BAR--------------------*/
@@ -23,9 +24,12 @@ nav{
     border-radius: 10px;
 }
 .nav-link:active{
-    color: yellow;
+    color: rgb(0, 55, 80);
 }
-@media (max-width: 858px){
+.navbar-brand > img{
+    width: 60px;
+    height: 30px;
+    object-fit: contain;
 
 }
 /* ----------------------------HOME--------------------*/
@@ -36,11 +40,6 @@ nav{
     width: 100%;
     
 }
-/* .homepage {
-    display: block;
-
-} */
-
 .homepage {
     background-image: url("../images/covertech.jpg");
     background-position: center;
@@ -52,14 +51,31 @@ nav{
 .homepage > h1{
     padding-top: 340px;
     font-size: 170px;
+    animation: slide 2s ease-in;
 }
 .homepage > h2{
-    font-size: 5vh;
+    font-size: 5vh; 
+    animation: slide 2s ease-in;   
 }
-.homepage > h1,h2{
+.homepage >h1,h2{
     text-align: center;
 }
+@keyframes slide{
+    0%{transform:translateX(-2000px) scale(.7);
+    transform:translateX(-2000px) scale(.7);
+    opacity:.7
+    }
 
+    70%{transform:translateX(0) scale(.7);
+        transform:translateX(0) scale(.7);
+        opacity:.7}
+
+    to{transform:scale(1);
+        transform:scale(1);
+        opacity:1}
+}
+
+ 
 /* ----------------------------ABOUT--------------------*/
 .about{
     display: flex;
@@ -104,8 +120,6 @@ nav{
     }
     .pic {
         display: block;
-        /* margin-left: auto;
-        margin-right: auto; */
         width: 100%;
 
     }
@@ -115,6 +129,10 @@ nav{
 }
 
 /* Project */
+.projects{
+    width: 100%;
+    background-color: #ffffff;
+}
 .projects > h2{
     padding-top: 30px;
     font-size: 5vh;
@@ -123,16 +141,7 @@ nav{
 .carousel{
     margin: 20px auto;
 }
-/* .carousel-caption{
 
-} */
-/* .d-block{
-    width: 100%;
-    height: 900px;
-    margin: 20px auto;
-    object-fit: contain;
-    min-width: 300px
-}   */
 @media (max-width: 858px){
 .carousel-indicators > button{
     width: auto;
@@ -157,14 +166,15 @@ nav{
     font-size: 7vh;
 }
 .contact > p{
-    font-size: 20px ;
+    font-size: 3vh ;
 }
 .contact-me{
-    font-size: 3vh;
+    font-size: 5vh;
     margin-top: 60px;
 }
 form{
     margin-top: 30px;
+    margin-bottom: 20px;
 }
 input , label{
     margin: 5px;
@@ -176,13 +186,54 @@ textarea{
     width: 100%;
     height: 190px;
 }
-.contact > button{
-    font-size: 3vh;
-    border-radius: 10px;
-    margin-left: 200px;
+.send{
+ width: calc(30% - 5px);
+ margin-left: 50%;
+ margin-right: 50%;
 }
+.send{
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: #ffffff; /* Green */
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 15px 20px;
+    text-decoration: none;
+  }
+  .send:hover{
+    background-color: #00ADB5;
+  }
 @media (max-width: 858px){
     .contact{
+        height: auto;
+    }
+}
+footer{
+    display:flex;
+    width: 100%;
+    height: 80px;
+    justify-content: end;
+    background-color: #00ADB5;
+}
+footer > p{
+    justify-items: start;
+
+}
+footer > ul li{
+    margin-top: 10px;
+    display: inline-block;
+    margin-right: 30px;
+
+    
+}
+.socialmedia a > img{
+    height:50px;
+    width: 60px;
+    object-fit: contain;
+
+}
+@media (max-width: 600px){
+    footer{
         height: auto;
     }
 }
